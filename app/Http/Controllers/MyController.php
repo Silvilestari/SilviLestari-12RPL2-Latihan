@@ -69,6 +69,37 @@ class MyController extends Controller
         $suplier = Suplier::all();
         return view('suplier', compact('suplier'));
     }
+
+
+    public function show($id)
+    {
+        $barang = Barang::findOrFail($id);
+        return view('show', compact('barang'));
+    }
+
+    public function showpembeli($id)
+    {
+        $pembeli = Pembeli::findOrFail($id);
+        return view('showpembeli', compact('pembeli'));
+    }
+
+    public function showpembelian($id)
+    {
+        $pembelian = Pembelian::findOrFail($id);
+        return view('showpembelian', compact('pembelian'));
+    }
+
+    public function showsuplier($id)
+    {
+        $suplier = Suplier::findOrFail($id);
+        return view('showsuplier', compact('suplier'));
+    }
+
+    public function showpesanan($id)
+    {
+        $pesanan = Pesanan::findOrFail($id);
+        return view('showpesanan', compact('pesanan'));
+    }
 }
 
 

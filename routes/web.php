@@ -36,6 +36,10 @@ Route::get('barang',
     [MyController::class, 'barang']
 );
 
+Route::get('barang/{id}',
+    [MyController::class, 'show']
+);
+
 Route::get('pesanan',
     [MyController::class, 'pesanan']
 );
@@ -50,4 +54,20 @@ Route::get('pembeli',
 
 Route::get('suplier',
     [MyController::class, 'suplier']
+);
+
+Route::get('pembeli/{id}',
+    [MyController::class, 'showpembeli']
+);
+
+Route::get('pembelian/{id}',
+    [MyController::class, 'showpembelian']
+);
+
+Route::get('pesanan/{id}',
+    [MyController::class, 'showpesanan']
+);
+
+Route::get('suplier/{id}',
+    [MyController::class, 'showsuplier']
 );
